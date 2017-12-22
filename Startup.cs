@@ -28,6 +28,7 @@ namespace TodoApi
         {
            // services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
             services.AddDbContext<TodoContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("todo")));
+            services.AddApplicationInsightsTelemetry(Configuration);
             services.AddMvc();
         }
 
@@ -38,7 +39,8 @@ namespace TodoApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
+            //app.UseApplicationInsightsExceptionTelemetry();
             app.UseMvc();
         }
     }
