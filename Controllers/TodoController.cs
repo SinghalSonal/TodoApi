@@ -30,7 +30,7 @@ namespace TodoApi.Controllers
             return _context.TodoItems.ToList();
         }
 
-        [HttpGet ("{id}")]
+        [HttpGet ("{id}", Name = "GetById")]
         public IActionResult GetById(long id)
         { 
                 var item = _context.TodoItems.FirstOrDefault(t => t.Id == id);
@@ -53,7 +53,7 @@ namespace TodoApi.Controllers
             _context.TodoItems.Add(item);
             _context.SaveChanges();
 
-            return CreatedAtRoute("GetTodo", new { id = item.Id }, item);
+            return CreatedAtRoute("GetById", new { id = item.Id }, item);
         }
 
         [HttpPut("{id}")]
