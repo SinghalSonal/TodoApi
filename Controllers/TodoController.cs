@@ -17,7 +17,7 @@ namespace TodoApi.Controllers
                 if(_context.TodoItems.Count()== 0)
                 {
                      
-                    _context.TodoItems.Add(new TodoItem{Id = 1, Name = "Item 1", IsComplete = true});
+                    _context.TodoItems.Add(new TodoItem{ Name = "Item 1", IsComplete = true});
                     
                     _context.SaveChanges();
                 
