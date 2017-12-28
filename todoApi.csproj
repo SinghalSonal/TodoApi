@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationInsightsResourceId>/subscriptions/64362d93-7fdd-4b7f-96aa-57a79d1ee4cc/resourcegroups/sonaltodo/providers/microsoft.insights/components/sonaltodo</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/64362d93-7fdd-4b7f-96aa-57a79d1ee4cc/resourcegroups/sonaltodo/providers/microsoft.insights/components/sonaltodo</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,13 +12,17 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.0.1"/>
-    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1"/>
-    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.0.1"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.0.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
 </Project>
